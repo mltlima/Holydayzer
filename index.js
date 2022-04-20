@@ -1,4 +1,5 @@
 import express from 'express';
+import cors from 'cors';
 
 const holidays = [
     { date: "1/1/2022", name: "Confraternização mundial" },
@@ -14,6 +15,7 @@ const holidays = [
     { date: "12/25/2022", name: "Natal" }
 ];
 const app = express();
+app.use(cors());
 let str = "";
 
 //show all hoidays
